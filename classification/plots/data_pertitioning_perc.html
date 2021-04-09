@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .vega-actions a {
+        margin-right: 12px;
+        color: #757575;
+        font-weight: normal;
+        font-size: 13px;
+    }
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@4"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@2.6.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@3"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+      var spec = {"config": {"view": {"width": 400, "height": 300}}, "data": {"name": "data-f3f9c9f7919f24d1bd6a4a38b10aa576"}, "mark": "bar", "encoding": {"color": {"type": "nominal", "field": "partition"}, "column": {"type": "ordinal", "field": "label"}, "tooltip": [{"type": "nominal", "field": "label"}, {"type": "nominal", "field": "partition"}, {"type": "quantitative", "field": "n"}], "x": {"type": "nominal", "field": "partition"}, "y": {"type": "quantitative", "field": "perc"}}, "title": "Data Partitioning (%)", "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json", "datasets": {"data-f3f9c9f7919f24d1bd6a4a38b10aa576": [{"n": 631, "label": "0 empty", "partition": "train", "perc": 0.11843093093093093}, {"n": 319, "label": "0 empty", "partition": "test", "perc": 0.12092494313874147}, {"n": 467, "label": "1 egg", "partition": "train", "perc": 0.08765015015015015}, {"n": 268, "label": "1 egg", "partition": "test", "perc": 0.10159211523881728}, {"n": 866, "label": "2 small larva", "partition": "train", "perc": 0.16253753753753752}, {"n": 450, "label": "2 small larva", "partition": "test", "perc": 0.17058377558756635}, {"n": 673, "label": "3 medium larva", "partition": "train", "perc": 0.12631381381381382}, {"n": 326, "label": "3 medium larva", "partition": "test", "perc": 0.12357846853677028}, {"n": 732, "label": "4 big larva", "partition": "train", "perc": 0.1373873873873874}, {"n": 353, "label": "4 big larva", "partition": "test", "perc": 0.13381349507202425}, {"n": 456, "label": "5 capped", "partition": "train", "perc": 0.08558558558558559}, {"n": 201, "label": "5 capped", "partition": "test", "perc": 0.07619408642911296}, {"n": 5, "label": "6 hatching", "partition": "train", "perc": 0.0009384384384384384}, {"n": 4, "label": "6 hatching", "partition": "test", "perc": 0.001516300227445034}, {"n": 695, "label": "7 nectar", "partition": "train", "perc": 0.13044294294294295}, {"n": 307, "label": "7 nectar", "partition": "test", "perc": 0.11637604245640637}, {"n": 652, "label": "8 pollen", "partition": "train", "perc": 0.12237237237237238}, {"n": 318, "label": "8 pollen", "partition": "test", "perc": 0.12054586808188021}, {"n": 41, "label": "9 dead", "partition": "train", "perc": 0.007695195195195195}, {"n": 30, "label": "9 dead", "partition": "test", "perc": 0.011372251705837756}, {"n": 110, "label": "10 unknown", "partition": "train", "perc": 0.020645645645645645}, {"n": 62, "label": "10 unknown", "partition": "test", "perc": 0.02350265352539803}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+
+  </script>
+</body>
+</html>

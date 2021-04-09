@@ -1,0 +1,12 @@
+name: beehive
+dependencies:
+  - python=3.8
+  - pandas
+  - pytorch
+  - torchvision
+  - pip:
+    - lmdb
+    - matplotlib
+    - seaborn
+    - scikit-image
+    - scikit-learn

@@ -1,0 +1,9 @@
+# ignore
+*.pyc
+*__pycache__*
+*bayer/segments/*
+
+# except for
+!data/README.md
+!*Bayer/segments/README.md
+!*Bayer/segments/*.py

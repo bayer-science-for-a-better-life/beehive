@@ -1,0 +1,57 @@
+[
+  {
+    "name": "0 empty",
+    "label": 0,
+    "subdirs": [0, 15]
+  },
+  {
+    "name": "1 egg",
+    "label": 1,
+    "subdirs": [1]
+  },
+  {
+    "name": "2 small larva",
+    "label": 2,
+    "subdirs": [3]
+  },
+  {
+    "name": "3 medium larva",
+    "label": 3,
+    "subdirs": [5]
+  },
+  {
+    "name": "4 big larva",
+    "label": 4,
+    "subdirs": [7]
+  },
+  {
+    "name": "5 capped",
+    "label": 5,
+    "subdirs": [9]
+  },
+  {
+    "name": "6 hatching",
+    "label": 6,
+    "subdirs": [10]
+  },
+  {
+    "name": "7 nectar",
+    "label": 7,
+    "subdirs": [11]
+  },
+  {
+    "name": "8 pollen",
+    "label": 8,
+    "subdirs": [12]
+  },
+  {
+    "name": "9 dead",
+    "label": 9,
+    "subdirs": [13]
+  },
+  {
+    "name": "10 unknown",
+    "label": 10,
+    "subdirs": [14]
+  }
+]

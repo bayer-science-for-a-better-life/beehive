@@ -1,0 +1,13 @@
+# ignore
+*data/*
+*data_bayer/*
+*.mdb
+*__pycache__/*
+*.pyc
+*.h5
+.vscode/*
+
+# except for
+!*data/README.md
+!*data_bayer/README.md
+!*dbs/README.md
